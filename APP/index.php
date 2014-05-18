@@ -52,7 +52,7 @@
 			// check welke id nog niet bezet is		
 		   $query1 = "SELECT MAX(id) AS id FROM chats LIMIT 1";
 			
-            $resultaat1 = mysqli_query($db, $query1);
+			$resultaat1 = mysqli_query($db, $query1);
 			while( $rij1 = mysqli_fetch_array($resultaat1) )
 			{
 				$lastid = $rij1["id"];
@@ -61,7 +61,7 @@
 			 		
 			// voeg melding toe in database
       
-              $query7 ="INSERT INTO chats (`id`, `klantnummer`, `content`) VALUES ('$id', '$klantnummer', '$uitleg');";
+              $query7 ="INSERT INTO chats (`id`, `custId`, `msg`) VALUES ('$id', '$klantnummer', '$uitleg');";
               mysqli_query($db,$query7);
               
               echo "nieuwe melding succesvol toegevoegd";

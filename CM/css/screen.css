@@ -1,8 +1,56 @@
+body{
+	font-family:Arial, Helvetica, sans-serif;	
+}
+h2{
+	font-size: 1.5rem;
+	line-height: 1rem;
+	text-transform: uppercase;
+}
+small{
+	font-size: 0.75rem;
+	line-height: 1.5rem;
+}
+p{
+	font-size: 1rem;
+	line-height: 1.2rem;	
+}
 section#cue{
-	background: #F5F5F5;
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+section#private{
 	width: 20%;
 	height: 100%;
 }
 section#cue .chat{
+	color: #fff;
+	background: #2c3e50;
+}
+section#cue .chat:hover{
+	background: #95a5a6;
+}
+section#private{
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+section#private .chat{
+	background: #95a5a6;
+}
+
+.chat{
+	display: block;
 	padding: 1rem;
+	cursor: move;
+  	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	/* Required to make elements draggable in old WebKit */
+	-khtml-user-drag: element;
+	-webkit-user-drag: element;
+}
+.chat.over {
+  border: 2px dashed #000;
 }
